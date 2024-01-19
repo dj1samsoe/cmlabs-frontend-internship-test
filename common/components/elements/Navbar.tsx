@@ -7,7 +7,7 @@ import useIsMobile from "@/common/hooks/useIsMobile";
 export default function Navbar() {
   const isMobile = useIsMobile();
   return (
-    <nav className="w-full fixed top-0 z-50 flex justify-between items-center px-7 py-5 bg-highlight/90 backdrop-blur-sm">
+    <nav className="w-full fixed top-0 z-50 flex justify-between items-center px-7 py-5 bg-white">
       <div className="flex items-center">
         <Link href="/" aria-label="Home">
           <h1 className="text-3xl font-bold">
