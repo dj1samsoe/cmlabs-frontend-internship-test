@@ -38,17 +38,18 @@ export default function ResponsiveDrawer(props: Props) {
   };
 
   const drawer = (
-    <div>
-      <IconButton
-        color="inherit"
-        aria-label="open drawer"
-        onClick={handleDrawerClose}
-        sx={{ display: { md: "block" } }}
-        className="absolute top-3 right-3 z-50"
-      >
-        <CloseIcon />
-      </IconButton>
-      <Divider className="pt-16" />
+    <div className="flex flex-col space-y-3">
+      <div className="flex justify-end pr-3">
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={handleDrawerClose}
+          sx={{ display: { md: "flex" } }}
+        >
+          <CloseIcon className="text-right" />
+        </IconButton>
+      </div>
+      <Divider />
       <List>
         <ListItem disablePadding={false}>
           <Link
