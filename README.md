@@ -20,6 +20,10 @@ Before you begin, make sure you have Node.js and npm (Node Package Manager) inst
    ```
 3. Install the dependencies:
    ```bash
+   npm install
+   ```
+4. Run the Projects
+   ```bash
    npm run dev
    ```
 
