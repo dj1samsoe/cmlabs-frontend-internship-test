@@ -49,7 +49,7 @@ export default function ResponsiveDrawer(props: Props) {
         <CloseIcon />
       </IconButton>
       <Divider className="pt-16" />
-      <List className="relative">
+      <List>
         <ListItem disablePadding={false}>
           <Link
             href="/"
