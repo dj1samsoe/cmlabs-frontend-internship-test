@@ -60,7 +60,10 @@ export default async function DescriptionPage({
 
       {data.meals.map((items: IDescription, index: number) => (
         <>
-          <div className="py-10 flex flex-col items-center space-y-5">
+          <div
+            className="py-10 flex flex-col items-center space-y-5"
+            key={index}
+          >
             <Image
               src={items.strMealThumb}
               width={300}

@@ -60,7 +60,10 @@ export default async function SubCategorySection({
         </h1>
         <div className="w-full py-10 gap-7 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
           {data.meals.map((items: ISubCategory, index: number) => (
-            <Link href={`/foods/${params.strCategory}/${items.idMeal}`}>
+            <Link
+              href={`/foods/${params.strCategory}/${items.idMeal}`}
+              key={index}
+            >
               <Card
                 className={clsxm(
                   "group relative flex items-center cursor-pointer lg:hover:scale-[102%] w-full"
