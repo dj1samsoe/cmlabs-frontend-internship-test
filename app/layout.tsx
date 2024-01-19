@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Layouts from "@/common/components/layouts";
 import NextTopLoader from "nextjs-toploader";
-
-const inter = Inter({ subsets: ["latin"] });
+import { nunitoSans } from "@/common/styles/font";
 
 export const metadata: Metadata = {
   title: "Meal Apps",
@@ -18,9 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={nunitoSans.className}>
         <NextTopLoader
-          color="#6B240C"
+          color="#2B2B2B"
           initialPosition={0.08}
           crawlSpeed={200}
           height={3}
@@ -28,7 +27,7 @@ export default function RootLayout({
           showSpinner={true}
           easing="ease"
           speed={200}
-          shadow="0 0 10px #E48F45,0 0 5px #F5CCA0"
+          shadow="0 0 10px #423F3E,0 0 5px #171010"
         />
         <Layouts>{children}</Layouts>
       </body>

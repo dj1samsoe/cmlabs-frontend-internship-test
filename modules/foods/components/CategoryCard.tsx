@@ -65,7 +65,7 @@ export default function CategoryCard({
           )}
         </div>
         <article className={contentContainerClasses}>
-          <h1 className="text-lg font-medium text-neutral-900 lg:group-hover:text-secondary transition-all duration-300">
+          <h1 className="text-lg font-bold text-neutral-900 lg:group-hover:text-secondary transition-all duration-300">
             {strCategory}
           </h1>
 

@@ -10,6 +10,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Link from "next/link";
 import CloseIcon from "@mui/icons-material/Close";
+import { nunitoSans } from "@/common/styles/font";
 
 const drawerWidth = 300;
 
@@ -56,7 +57,10 @@ export default function ResponsiveDrawer(props: Props) {
             href="/"
             aria-label="Home"
             onClick={handleDrawerClose}
-            className="w-full text-center rounded-md hover:bg-neutral-300 transition-all duration-200"
+            className={
+              nunitoSans.className +
+              "rounded-md hover:bg-neutral-300 transition-all duration-200 mx-auto px-24"
+            }
           >
             <ListItemText primary="Home" />
           </Link>
@@ -66,29 +70,38 @@ export default function ResponsiveDrawer(props: Props) {
             href="/foods"
             aria-label="Foods"
             onClick={handleDrawerClose}
-            className="w-full text-center rounded-md hover:bg-neutral-300 transition-all duration-200"
+            className={
+              nunitoSans.className +
+              "rounded-md hover:bg-neutral-300 transition-all duration-200 mx-auto px-24"
+            }
           >
             <ListItemText primary="Foods" />
           </Link>
         </ListItem>
-        <ListItem disablePadding={false}>
+        <ListItem disablePadding={false} className="w-full">
           <Link
-            href="/ingredients"
+            href="/"
             aria-label="Ingredients"
             onClick={handleDrawerClose}
-            className="w-full text-center rounded-md hover:bg-neutral-300 transition-all duration-200"
+            className={
+              nunitoSans.className +
+              "rounded-md hover:bg-neutral-300 transition-all duration-200 mx-auto px-24"
+            }
           >
             <ListItemText primary="Ingredients" />
           </Link>
         </ListItem>
         <ListItem disablePadding={false}>
           <Link
-            href="/local-culinary"
-            aria-label="Local Culinary"
+            href="/"
+            aria-label="Culinary"
             onClick={handleDrawerClose}
-            className="w-full text-center rounded-md hover:bg-neutral-300 transition-all duration-200"
+            className={
+              nunitoSans.className +
+              "rounded-md hover:bg-neutral-300 transition-all duration-200 mx-auto px-24"
+            }
           >
-            <ListItemText primary="Local Culinary" />
+            <ListItemText primary="Culinary" />
           </Link>
         </ListItem>
       </List>

@@ -3,13 +3,21 @@ import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function Hero() {
+  const bgImage = "url('/wave.svg')";
+
   return (
-    <section className="pt-16">
+    <section
+      className="pt-24 min-h-screen max-w-screen-2xl"
+      style={{
+        backgroundImage: bgImage,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="py-8 px-10 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
         <Link
-          href="#"
+          href="/foods"
           className="inline-flex justify-between items-center py-1 px-2 mb-7 text-sm text-neutral-700 bg-neutral-100 rounded-full hover:bg-neutral-200"
-          role="alert"
         >
           <span className="text-xs font-bold rounded-full text-primary px-4 py-1.5 mr-3">
             New
@@ -24,16 +32,16 @@ export default function Hero() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </Link>
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-neutral-900 md:text-5xl lg:text-6xl">
           We Explore The World's Flavors
         </h1>
-        <p className="mb-8 text-lg font-normal text-neutral-500 lg:text-xl sm:px-16 xl:px-48">
+        <p className="mb-8 text-lg font-normal text-secondary lg:text-xl sm:px-16 xl:px-48">
           "Here at Meal Apps, we focus on markets where technology, innovation,
           and capital can unlock long-term value and drive economic growth,
           particularly in the realm of foods, culinary experiences, and
@@ -42,7 +50,7 @@ export default function Hero() {
         <div className="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <Link
             href="/foods"
-            className="inline-flex gap-3 justify-center items-center py-3 px-5 text-base font-medium text-center text-primary rounded-lg border border-neutral-300 hover:bg-neutral-100 focus:ring-4 focus:ring-neutral-100 "
+            className="inline-flex gap-3 justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-neutral-300 bg-secondary hover:bg-tertiary focus:ring-4 focus:ring-neutral-100 "
           >
             Let's Explore
             <FaLongArrowAltRight />
