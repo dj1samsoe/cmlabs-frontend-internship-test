@@ -26,24 +26,3 @@ Before you begin, make sure you have Node.js and npm (Node Package Manager) inst
    ```bash
    npm run dev
    ```
-
-## Usage
-
-1. Configure your database settings in the .env file.
-2. Run the Prisma migration to set up your database schema:
-   ```bash
-   npx prisma migrate dev
-   ```
-3. Start the development server:
-   ```bash
-   yarn dev
-   ```
-4. Access the application in your browser at http://localhost:3000.
-
-## Contributing
-
-Contributions to this project are welcome and encouraged! If you find any bugs, want to add new features, or improve the existing ones, feel free to open issues and pull requests.
-
-## Reference
-
-[Bayu Setiawan](https://github.com/Bayusetiawan45/v2.codebayu.com)
