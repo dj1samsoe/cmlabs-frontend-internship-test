@@ -22,7 +22,7 @@ export default function Hero() {
           <span className="text-xs font-bold rounded-full text-primary px-4 py-1.5 mr-3">
             New
           </span>{" "}
-          <span className="text-sm font-medium">
+          <span className="lg:text-sm text-xs font-medium">
             MealApps is out! See what's new
           </span>
           <svg

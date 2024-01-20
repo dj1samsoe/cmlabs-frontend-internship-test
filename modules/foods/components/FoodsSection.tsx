@@ -34,7 +34,7 @@ export default async function FoodsSection() {
             Home
           </Link>
           <Link
-            className="flex gap-2 items-center text-primary hover:underline transition-all duration-200"
+            className="flex gap-0 items-center text-primary hover:underline transition-all duration-200"
             href="/foods"
           >
             <MenuBookIcon sx={{ mr: 0.5 }} fontSize="inherit" />

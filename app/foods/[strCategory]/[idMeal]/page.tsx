@@ -49,8 +49,8 @@ export default async function DescriptionPage({
 
   return (
     <section className="flex min-h-screen w-full flex-col items-center justify-center pt-24 px-10">
-      <div className="w-full flex text-start py-5">
-        <Breadcrumbs aria-label="breadcrumb">
+      <div className="w-full flex justify-start py-5">
+        <Breadcrumbs aria-label="breadcrumb" className="w-full">
           <Link
             className="flex gap-0 items-center text-primary hover:underline transition-all duration-200"
             href="/"
@@ -59,21 +59,21 @@ export default async function DescriptionPage({
             Home
           </Link>
           <Link
-            className="flex gap-2 items-center text-primary hover:underline transition-all duration-200"
+            className="flex gap-0 items-center text-primary hover:underline transition-all duration-200"
             href="/foods"
           >
             <MenuBookIcon sx={{ mr: 0.5 }} fontSize="inherit" />
             Foods
           </Link>
           <Link
-            className="flex gap-2 items-center text-primary hover:underline transition-all duration-200"
+            className="flex gap-0 items-center text-primary hover:underline transition-all duration-200"
             href={`/foods/${data.meals[0].strCategory}`}
           >
             <FastfoodIcon sx={{ mr: 0.5 }} fontSize="inherit" />
             {data.meals[0].strCategory}
           </Link>
           <Link
-            className="flex gap-2 items-center text-primary hover:underline transition-all duration-200"
+            className="flex gap-0 items-center text-primary hover:underline transition-all duration-200"
             href={`/foods/${data.meals[0].strCategory}/${data.meals[0].idMeal}`}
           >
             <KitchenIcon sx={{ mr: 0.5 }} fontSize="inherit" />
@@ -88,25 +88,24 @@ export default async function DescriptionPage({
 
         <div className="flex flex-col space-y-0">
           <p className="text-md text-secondary">
-            Category :{" "}
-            {data.meals[0].strCategory > 0 ? data.meals[0].strCategory : "-"}
+            Category : {data.meals[0].strCategory || "-"}
           </p>
           <p className="text-md text-secondary">
-            Tags : {data.meals[0].strTags > 0 ? data.meals[0].strTags : "-"}
+            Tags : {data.meals[0].strTags ? data.meals[0].strTags : "-"}
           </p>
         </div>
       </div>
 
       {data.meals.map((items: IDescription, index: number) => (
         <div key={index}>
-          <div className="py-10 flex md:flex-row flex-col gap-10 w-fit">
-            <div className="flex flex-col w-full">
+          <div className="py-10 flex md:flex-row flex-col gap-5">
+            <div className="flex flex-col w-3/4">
               <Image
                 src={items.strMealThumb}
                 width={400}
                 height={400}
                 alt={items.strMeal}
-                className="rounded-xl object-cover pb-5"
+                className="rounded-xl object-cover pb-5 w-full"
               />
               <div className="flex flex-col space-y-5">
                 <h1 className="text-3xl font-semibold">Recipes : </h1>

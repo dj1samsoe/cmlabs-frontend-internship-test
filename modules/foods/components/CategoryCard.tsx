@@ -38,7 +38,7 @@ export default function CategoryCard({
     <Link href={`/foods/${name}`}>
       <Card
         className={clsxm(
-          "group relative flex items-center sm:flex-row gap-6 cursor-pointer border border-neutral-100 dark:border-neutral-900 lg:hover:scale-[102%] w-full",
+          "group relative flex items-center sm:flex-row gap-6 cursor-pointer border border-neutral-200 lg:hover:scale-[102%] w-full shadow-xl",
           viewOption === "grid"
             ? "!flex-col sm:h-[400px] w-full"
             : "!flex-row sm:p-5 sm:px-6",
@@ -65,7 +65,7 @@ export default function CategoryCard({
           )}
         </div>
         <article className={contentContainerClasses}>
-          <h1 className="text-lg font-bold text-neutral-900 lg:group-hover:text-secondary transition-all duration-300">
+          <h1 className="text-xl font-bold text-neutral-900 lg:group-hover:text-secondary transition-all duration-300">
             {strCategory}
           </h1>
 

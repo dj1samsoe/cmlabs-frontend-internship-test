@@ -39,8 +39,8 @@ export default function ResponsiveDrawer(props: Props) {
   };
 
   const drawer = (
-    <div className="flex flex-col space-y-3">
-      <div className="flex justify-end pr-3">
+    <div className="flex flex-col">
+      <div className="flex justify-end p-3">
         <IconButton
           color="inherit"
           aria-label="open drawer"
@@ -123,14 +123,13 @@ export default function ResponsiveDrawer(props: Props) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="navbar"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           variant="temporary"
           open={mobileOpen}
           onTransitionEnd={handleDrawerTransitionEnd}
           onClose={handleDrawerClose}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "block", md: "block", lg: "none" },
@@ -142,19 +141,6 @@ export default function ResponsiveDrawer(props: Props) {
         >
           {drawer}
         </Drawer>
-        {/* <Drawer
-          variant="permanent"
-          sx={{
-            display: { xs: "none", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-            },
-          }}
-          open
-        >
-          {drawer}
-        </Drawer> */}
       </Box>
     </div>
   );

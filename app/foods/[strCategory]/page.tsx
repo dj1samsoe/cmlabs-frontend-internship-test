@@ -63,14 +63,14 @@ export default async function SubCategorySection({
               Home
             </Link>
             <Link
-              className="flex gap-2 items-center text-primary hover:underline transition-all duration-200"
+              className="flex gap-0 items-center text-primary hover:underline transition-all duration-200"
               href="/foods"
             >
               <MenuBookIcon sx={{ mr: 0.5 }} fontSize="inherit" />
               Foods
             </Link>
             <Link
-              className="flex gap-2 items-center text-primary hover:underline transition-all duration-200"
+              className="flex gap-0 items-center text-primary hover:underline transition-all duration-200"
               href={`/foods/${params.strCategory}`}
             >
               <FastfoodIcon sx={{ mr: 0.5 }} fontSize="inherit" />
@@ -108,8 +108,8 @@ export default async function SubCategorySection({
                     className={clsxm("rounded-xl object-cover w-full h-full")}
                   />
 
-                  <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-70 justify-center items-center text-white rounded-xl">
-                    <span className="text-xl font-extrabold text-center">
+                  <div className="flex gap-1 absolute top-0 left-0 w-full h-full bg-black opacity-70 justify-center items-center  rounded-xl">
+                    <span className="text-xl font-extrabold text-center text-white">
                       {items.strMeal.toUpperCase()}
                     </span>
                   </div>
